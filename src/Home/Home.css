@@ -1,0 +1,18 @@
+@media screen and (max-width: 767px) {
+    .homePage{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+   .homeHeader{
+       margin-top: 25px;
+   }
+}
+@media screen and (min-width: 768px) and (max-width:1023) {
+    .homePage{
+        display: flex;
+       flex-direction: column;
+    }
+    
+}

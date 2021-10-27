@@ -1,0 +1,13 @@
+.icnScroll .scrollTop {
+  z-index: 2;
+  position: fixed;
+  bottom: 2vh;
+  background-color: white;
+  color: #091f43;
+  right: 5%;
+}
+
+.icnScroll .scrollTop:hover {
+  background-color: white;
+  color: #091f43;
+}

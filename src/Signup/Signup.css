@@ -1,0 +1,222 @@
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 35px;
+    margin-top: -45px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .header img {
+    margin-top: -35px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .signup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .champ {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    font-weight: bold;
+    align-items: center;
+  }
+
+  .inputForm {
+    border-radius: 0.5rem;
+    height: 25px;
+    width: 175px;
+    margin: 15px;
+    border: none;
+    text-align: center;
+    box-shadow: 5px 5px 5px 3px rgba(139, 139, 139, 0.568);
+    font-family: "roboto";
+  }
+
+  .champ select {
+    text-align: center;
+    margin: 20px;
+    border-radius: 0.5rem;
+    height: 25px;
+    border: none;
+    box-shadow: 5px 5px 5px 3px rgba(139, 139, 139, 0.568);
+    width: 175px;
+    font-family: "roboto";
+    cursor: pointer;
+  }
+
+  .btnSign {
+    background-color: rgb(105, 218, 105);
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 0.5rem;
+    height: 25px;
+    width: 225px;
+    margin: 30px;
+    border: none;
+    text-align: center;
+  }
+
+  .btnsign:hover {
+    transform: scale(1.4);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 35px;
+    margin-top: -50px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header img {
+    width: 250px;
+    height: 250px;
+    margin-top: -40px;
+  }
+
+  .signup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -25px;
+  }
+
+  .champ {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    font-weight: bold;
+    align-items: center;
+  }
+
+  .inputForm {
+    border-radius: 0.5rem;
+    height: 35px;
+    width: 225px;
+    margin: 40px;
+    border: none;
+    text-align: center;
+    box-shadow: 5px 5px 5px 3px rgba(139, 139, 139, 0.568);
+  }
+
+  .champ select {
+    text-align: center;
+    margin: 8px;
+    border-radius: 0.5rem;
+    height: 45px;
+    border: none;
+    box-shadow: 5px 5px 5px 3px rgba(139, 139, 139, 0.568);
+    width: 225px;
+  }
+
+  .btnSign {
+    background-color: rgb(105, 218, 105);
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 0.5rem;
+    height: 35px;
+    width: 225px;
+    margin: 30px;
+    border: none;
+    text-align: center;
+  }
+
+  .btnsign:hover {
+    transform: scale(1.4);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .signup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 35px;
+    margin-top: -40px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header img {
+    width: 220px;
+    height: 220px;
+    margin-top: -45px;
+  }
+
+  .header button{
+cursor: pointer;
+border: none;
+background-color: transparent;
+color: #091f43;
+border-radius: 1.5rem;
+height: 25px;
+  }
+
+  .champ {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    font-weight: bold;
+    align-items: center;
+  }
+
+   .inputForm {
+    border-radius: 0.5rem;
+    height: 55px;
+    width: 225px;
+    margin: 30px;
+    border: none;
+    text-align: center;
+    box-shadow: 5px 5px 5px 3px rgba(139, 139, 139, 0.568);
+  }
+
+  .champ select {
+    text-align: center;
+    margin: 8px;
+    border-radius: 0.5rem;
+    height: 55px;
+    border: none;
+    box-shadow: 5px 5px 5px 3px rgba(139, 139, 139, 0.568);
+    width: 225px;
+  }
+
+  .btnSign {
+    background-color: rgb(105, 218, 105);
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 0.5rem;
+    height: 45px;
+    width: 225px;
+    margin: 30px;
+    border: none;
+    text-align: center;
+    box-shadow: 5px 5px 5px 3px rgba(139, 139, 139, 0.568);
+  }
+
+  .btnSign:hover {
+    transform: scale(1.1);
+  }
+}

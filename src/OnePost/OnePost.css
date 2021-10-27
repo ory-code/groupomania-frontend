@@ -1,0 +1,77 @@
+.showPost {
+  display: flex;
+  justify-content: center;
+}
+
+.onePostCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  background-color: white;
+  width: 450px;
+  border-radius: 1rem;
+}
+
+.onePostCardHeaders {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px;
+}
+
+.onePostCardText {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.OnePostComment {
+  display: flex;
+  background-color: rgba(228, 226, 226, 0.712);
+  flex-direction: column;
+  border-radius: 0 0 1rem 1rem;
+  width: 450px;
+}
+.OnePostComment p {
+  margin: 5px;
+}
+.postComment {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 5px;
+}
+
+.postComment button {
+  cursor: pointer;
+  background-color: #091f43;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.postComment .postCommentInput {
+  width: 75%;
+  font-family: "roboto";
+  white-space: initial;
+  resize: none;
+  padding: 5px;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.updateCom textarea {
+  font-family: "roboto";
+  width: 439px;
+  padding: 5px;
+  white-space: initial;
+  resize: none;
+}
+
+.buttonContainer .btn {
+  font-family: "roboto";
+  background-color:#091f43;
+  color: white;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+

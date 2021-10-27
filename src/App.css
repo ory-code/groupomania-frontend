@@ -1,0 +1,16 @@
+body {
+  margin: 0 auto;
+  font-family: "roboto";
+  color: #091f43;
+  background: url("./assets/building.jpg") no-repeat ;
+  background-attachment: fixed;
+
+}
+a {
+  color: #091f43;
+}
+
+a:after{
+  text-decoration: none;
+  color: #091f43;
+}

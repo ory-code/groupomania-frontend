@@ -1,0 +1,115 @@
+@media screen and (max-width: 767px) {
+  .createPost {
+    background-color: white;
+    width: 280px;
+    height: 100px;
+    border-radius: 1.2rem;
+  }
+  
+  .createPostHeader h2 {
+    font-size: 15px;
+   padding-top: 5px;
+   padding-left: 8px;
+  }
+  
+  .postInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .inputPostArea {
+    border: none;
+    background-color: white;
+  }
+  .inputMedia button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(78, 78, 78);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .createPostPage {
+    display: flex;
+    justify-content: center;
+  }
+  .createPost {
+    background-color: white;
+
+    width: 480px;
+    height: 100px;
+    border-radius: 1.2rem;
+  }
+
+  
+  .createPostHeader h2 {
+    font-size: 18px;
+    padding-left: 8px;
+  }
+ 
+
+  .postInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .inputPostArea {
+    border: none;
+    font-size: 15px;
+    background-color: white;
+  }
+  .inputMedia button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(78, 78, 78);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .createPostPage {
+    display: flex;
+    justify-content: center;
+  }
+  .createPost {
+    background-color: white;
+    width: 580px;
+    height: 100px;
+    border-radius: 1.2rem;
+  }
+ 
+  
+  .createPostHeader h2 {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+  .createPostHeader a:link {
+    text-decoration: none;
+  }
+  .createPostHeader a:visited {
+    text-decoration: none;
+    color: black;
+  }
+
+  .postInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .inputPostArea {
+    border: none;
+    font-size: 15px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .inputMedia button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(78, 78, 78);
+  }
+}
