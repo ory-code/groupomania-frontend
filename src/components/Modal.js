@@ -8,13 +8,14 @@ import { newPost } from "../api/Post";
 const Modal = ({ showModal, setShowModal }) => {
   const userId = Store.getState().userId;
   const [text, setText] = useState("");
-  const [img, setImage] = useState("");
+  const [img, setImage] = useState([]);
 
+  console.log(img);
   const createPost = () => {
     const formData = new FormData();
     formData.append("userid", userId);
     formData.append("text", text);
-    formData.append("file", img[0]);
+    formData.append("file", img);
     newPost({ userid: userId, text: text, img: img });
 
     setShowModal(false);
@@ -48,7 +49,8 @@ const Modal = ({ showModal, setShowModal }) => {
                 className="mediaInput"
                 type="file"
                 name="img"
-                onChange={(e) => setImage(e.target.files)}
+                value={img}
+                onChange={(e) => setImage(e.target.files[0])}
               ></input>
             </div>
           </form>
