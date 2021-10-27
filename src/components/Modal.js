@@ -8,7 +8,7 @@ import { newPost } from "../api/Post";
 const Modal = ({ showModal, setShowModal }) => {
   const userId = Store.getState().userId;
   const [text, setText] = useState("");
-  const [img, setImage] = useState([]);
+  const [img, setImage] = useState("");
 
   console.log(img);
   const createPost = () => {

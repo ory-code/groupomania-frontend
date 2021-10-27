@@ -8,11 +8,12 @@
 .post {
   display: flex;
   flex-direction: column;
+  padding: 0.5em 0.5em;
   justify-content: center;
   margin: 20px;
   background-color: white;
   width: 400px;
-  height: 150px;
+  min-height: 150px;
   border-radius: 1rem;
 }
 .headerPost {
@@ -20,6 +21,15 @@
   justify-content: flex-start;
   margin: 5px;
 }
+.impPost {
+  display: flex;
+  justify-content: center;
+  background-color: blue;
+}
+.impPost img {
+  width: 250px;
+}
+
 .updatePost {
   display: flex;
   flex-direction: column;

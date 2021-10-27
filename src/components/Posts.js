@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Store from "../reducers/index";
-import { getAllPost, deletePost, updatePost} from "../api/Post";
+import testdd from "../assets/icon-noir.png";
+import { getAllPost, deletePost, updatePost } from "../api/Post";
 import UpdateIcon from "@mui/icons-material/Update";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./Post.css";
@@ -27,7 +28,6 @@ const Posts = () => {
     });
   }, [shouldUpdate]);
 
- 
   const updateItem = async () => {
     updatePost(postInUpdate);
   };
@@ -52,6 +52,9 @@ const Posts = () => {
               <span className="pseudo">
                 {post.User.firstname} {post.User.name}
               </span>
+            </div>
+            <div className="impPost">
+              <img className="" src={testdd} alt=""></img>
             </div>
             {isUpdated == false && <p className="text">{post.text}</p>}
             {isUpdated && postInUpdate?.id != post.id && (
@@ -92,7 +95,7 @@ const Posts = () => {
                 />
               </div>
             )}
-            <img className="img" src={post.img} alt=""></img>
+            
             <div
               className="footerPost"
               onClick={() => {
