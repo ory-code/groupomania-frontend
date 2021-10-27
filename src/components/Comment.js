@@ -11,7 +11,7 @@ const Comment = () => {
       setComments(res.data);
       setSchouldUpdate(false);
     });
-  },[comments]);
+  },[shouldUpdate]);
 
   return (
     <div className="commentArea">

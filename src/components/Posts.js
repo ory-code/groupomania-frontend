@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Store from "../reducers/index";
-import { getAllPost, deletePost, updatePost, getOnePost } from "../api/Post";
+import { getAllPost, deletePost, updatePost} from "../api/Post";
 import UpdateIcon from "@mui/icons-material/Update";
 import DeleteIcon from "@mui/icons-material/Delete";
-
 import "./Post.css";
 import { useHistory } from "react-router";
 import Loading from "./Loading";
 
 const Posts = () => {
   const adminData = Store.getState().isAdmin;
-
   const userId = Store.getState().userId;
-  console.log(adminData);
   const History = useHistory();
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
-  const [onePost, setOnePost] = useState(null);
   const [isUpdated, setIsUpdated] = useState(false);
   const [postInUpdate, SetPostInUpdate] = useState(null);
   const [shouldUpdate, setShouldUpdate] = useState(true);
@@ -29,7 +25,7 @@ const Posts = () => {
       setPosts(res.data);
       setShouldUpdate(false);
     });
-  }, []);
+  }, [shouldUpdate]);
 
  
   const updateItem = async () => {
@@ -100,7 +96,6 @@ const Posts = () => {
             <div
               className="footerPost"
               onClick={() => {
-                setOnePost(post.id);
                 History.push(`/posts/${post.id}`);
               }}
             >

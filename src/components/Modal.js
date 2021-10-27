@@ -1,21 +1,22 @@
 import React, { useState } from "react";
+import Store from "../reducers/index";
+
 import "./Modal.css";
 import CloseIcon from "@mui/icons-material/Close";
 import { newPost } from "../api/Post";
 
 const Modal = ({ showModal, setShowModal }) => {
-  const authData = JSON.parse(localStorage.getItem("persist:authData"));
-  const myUserId = authData.userId;
-  const userId = myUserId;
+  const userId = Store.getState().userId;
   const [text, setText] = useState("");
   const [img, setImage] = useState("");
 
   const createPost = () => {
-    const formData = new FormData()
-
-    formData.append("userid", userId)
-
+    const formData = new FormData();
+    formData.append("userid", userId);
+    formData.append("text", text);
+    formData.append("file", img[0]);
     newPost({ userid: userId, text: text, img: img });
+
     setShowModal(false);
   };
 
@@ -41,12 +42,13 @@ const Modal = ({ showModal, setShowModal }) => {
               ></textarea>
             </div>
             <div className="modalMedia">
-              <input className="submitPost" name="img"  type="submit"></input>
+              <input className="submitPost" name="img" type="submit"></input>
               <input
+                id="img"
                 className="mediaInput"
                 type="file"
-                value={img}
-                onChange={(e) => setImage(e.target.files[0])}
+                name="img"
+                onChange={(e) => setImage(e.target.files)}
               ></input>
             </div>
           </form>
