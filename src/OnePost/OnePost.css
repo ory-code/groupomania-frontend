@@ -14,9 +14,16 @@
 }
 
 .onePostCardHeaders {
+ padding: 0.5em 0.5em;
+}
+
+.imgOnePost {
   display: flex;
-  justify-content: flex-start;
-  margin: 5px;
+  justify-content: center;
+  background-color: blue;
+}
+ img {
+  width: 250px;
 }
 
 .onePostCardText {

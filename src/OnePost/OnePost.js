@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Store from "../reducers/index";
+import testImg from "../assets/icon-noir.png";
+
 import { useParams } from "react-router-dom";
 import { deletePost, getOnePost, updatePost } from "../api/Post";
 import { postComment, updateComment, deleteComment } from "../api/Comment";
@@ -58,6 +60,7 @@ const OnePost = () => {
         {com.User.firstname}
         {com.User.name}{" "}
       </div>
+
       {commentIsUpdated === false && <p key={com.id}>{com.content}</p>}
       {commentIsUpdated && commentInUpdate?.id !== com.id && (
         <div className="textCom">
@@ -116,8 +119,13 @@ const OnePost = () => {
                 </span>
               </div>
             </div>
+            <div className="imgOnePost">
+              <img className="" src={testImg} alt=""></img>
+            </div>
             <div className="onePostCardText">
-              {postIsUpdated == false && <p className="text">{onePost?.text}</p>}
+              {postIsUpdated == false && (
+                <p className="text">{onePost?.text}</p>
+              )}
               {postIsUpdated && postInUpdate?.id != onePost.id && (
                 <div className="text">
                   <p>{onePost.text}</p>

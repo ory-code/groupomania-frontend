@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Store from "../reducers/index";
-import testdd from "../assets/icon-noir.png";
+import testImg from "../assets/icon-noir.png";
 import { getAllPost, deletePost, updatePost } from "../api/Post";
 import UpdateIcon from "@mui/icons-material/Update";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -54,7 +54,7 @@ const Posts = () => {
               </span>
             </div>
             <div className="impPost">
-              <img className="" src={testdd} alt=""></img>
+              <img className="" src={testImg} alt=""></img>
             </div>
             {isUpdated == false && <p className="text">{post.text}</p>}
             {isUpdated && postInUpdate?.id != post.id && (
