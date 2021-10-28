@@ -6,11 +6,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import { newPost } from "../api/Post";
 
 const Modal = ({ showModal, setShowModal }) => {
+
   const userId = Store.getState().userId;
   const [text, setText] = useState("");
   const [img, setImage] = useState("");
 
-  console.log(img);
+
   const createPost = () => {
     const formData = new FormData();
     formData.append("userid", userId);
@@ -20,7 +21,6 @@ const Modal = ({ showModal, setShowModal }) => {
 
     setShowModal(false);
   };
-
   return (
     <>
       {showModal ? (
@@ -48,8 +48,7 @@ const Modal = ({ showModal, setShowModal }) => {
                 id="img"
                 className="mediaInput"
                 type="file"
-                name="img"
-                value={img}
+                name={img}
                 onChange={(e) => setImage(e.target.files[0])}
               ></input>
             </div>

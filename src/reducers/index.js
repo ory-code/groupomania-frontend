@@ -1,4 +1,3 @@
-
 import userReducer from "./user";
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
@@ -6,12 +5,10 @@ import storage from "redux-persist/lib/storage";
 import persistStore from "redux-persist/lib/persistStore";
 import persistReducer from "redux-persist/es/persistReducer";
 
-
-
 const persistConfig = {
   key: "authData",
   storage: storage,
-  blacklist: ["authData"]
+  blacklist: ["authData"],
 };
 
 const pReducer = persistReducer(persistConfig, userReducer);
@@ -19,25 +16,4 @@ const middleware = applyMiddleware(thunk);
 const store = createStore(pReducer, middleware);
 const persistStoreData = persistStore(store);
 
-export default (persistStoreData, store);
-
-
-
-
-
-
-
-// const reducers = combineReducers({
-//   userReducer,
-// });
-
-// const store = createStore(
-//   persistCombineReducers(
-//     { key: "root", storage: storage },
-//     {
-//       user: userReducer,
-//     }
-//   ),
-//   composeWithDevTools(applyMiddleware(thunk)),
-
-// );
+export default (persistStoreData, store)

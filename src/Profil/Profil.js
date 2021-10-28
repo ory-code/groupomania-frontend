@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { deleteProfil, getOneProfil, updateProfil } from "../api/Profil";
+import { deleteProfil, getOneProfil } from "../api/Profil";
 import "./Profil.css";
 import Navbar from "../components/Navbar";
 import { useParams } from "react-router";

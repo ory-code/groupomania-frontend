@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Store from "../reducers/index";
-import testImg from "../assets/icon-noir.png";
 import { getAllPost, deletePost, updatePost } from "../api/Post";
 import UpdateIcon from "@mui/icons-material/Update";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -54,15 +53,15 @@ const Posts = () => {
               </span>
             </div>
             <div className="impPost">
-              <img className="" src={testImg} alt=""></img>
+              <img className="" src={post.img} alt=""></img>
             </div>
-            {isUpdated == false && <p className="text">{post.text}</p>}
-            {isUpdated && postInUpdate?.id != post.id && (
+            {isUpdated === false && <p className="text">{post.text}</p>}
+            {isUpdated && postInUpdate?.id !== post.id && (
               <div className="text">
                 <p>{post.text}</p>
               </div>
             )}
-            {isUpdated && postInUpdate?.id == post.id && (
+            {isUpdated && postInUpdate?.id === post.id && (
               <div className="updatePost">
                 <textarea
                   defaultValue={post.text}

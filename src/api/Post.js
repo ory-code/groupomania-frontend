@@ -17,6 +17,9 @@ export const getAllPost = async () => {
     });
 };
 
+
+
+
 export const newPost = async (formData) => {
   const tokenData = Store.getState().token;
   console.log(formData);
@@ -32,6 +35,10 @@ export const newPost = async (formData) => {
     })
     .catch((err) => console.log(err));
 };
+
+
+
+
 
 export const getOnePost = async (id) => {
   const tokenData = Store.getState().token;

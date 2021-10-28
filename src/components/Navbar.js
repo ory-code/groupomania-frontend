@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../components/Navbar.css";
 import Store from "../reducers/index";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
-import { useHistory, useParams } from "react-router";
+import { useHistory } from "react-router";
 import LogoutIcon from "@mui/icons-material/Logout";
 import logo from "../assets/icon-noir.png";
 import "./Navbar.css";
