@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Store from "../reducers/index";
-import testImg from "../assets/icon-noir.png";
+import testImg from "../assets/datacenter.jpg";
 
 import { useParams } from "react-router-dom";
 import { deletePost, getOnePost, updatePost } from "../api/Post";

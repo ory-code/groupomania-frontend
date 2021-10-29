@@ -20,10 +20,10 @@
 .imgOnePost {
   display: flex;
   justify-content: center;
-  background-color: blue;
+  
 }
  img {
-  width: 250px;
+  width: 390px;
 }
 
 .onePostCardText {

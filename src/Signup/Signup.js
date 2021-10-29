@@ -27,7 +27,7 @@ const Signup = () => {
     <section>
       <div className="header">
         <img src={logo} alt="logo groupomania"></img>
-        <h1> Inscription </h1>
+        <h1 className="signupH1"> Inscription </h1>
         <button onClick={()=> {history.push("/login")}}>Vous avez déjà un compte ?</button>
       </div>
       <form className="signup" onSubmit={onSubmit}>

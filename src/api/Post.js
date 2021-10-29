@@ -26,8 +26,7 @@ export const newPost = async (formData) => {
   return await axios
     .post(`${process.env.REACT_APP_API_URL}posts`, formData, {
       headers: {
-        authorization: `Bearer ${tokenData}`,
-        
+        authorization: `Bearer ${tokenData}` 
       },
     })
     .then((res) => {

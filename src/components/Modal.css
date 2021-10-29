@@ -1,4 +1,4 @@
-@media screen and (min-width:300px) and (max-width: 767px) {
+@media screen  and (max-width: 767px) {
   .modal {
     max-width: 100%;
     height: 100%;
@@ -10,11 +10,11 @@
     bottom: 0px;
   }
 
-  .modalForm {
+ .modal .modalForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
-   width: 400px;
+   width: 280px;
     height: 440px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
     background: #fff;
@@ -35,14 +35,16 @@
   .modalHeader .fa-times-circle {
     font-size: 25px;
   }
-  .modalText {
-    width: 800px;
+ .modal .modalText {
+    width: 280px;
     justify-content: center;
     display: flex;
+    
   }
-  textarea {
+ .modal textarea {
     white-space: nowrap;
     overflow: hidden;
+    resize: none;
   }
   .modalInput {
     font-size: 18px;
@@ -52,15 +54,16 @@
   }
   .modalMedia {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     margin: 25px;
   }
   .submitPost {
     background-color: rgb(105, 218, 105);
     cursor: pointer;
+    margin-bottom: 8px;
     border: none;
     border-radius: 0.5rem;
-    width: 130px;
+    width: 120px;
   }
 }
 @media screen and (min-width: 768px), (max-width: 1023px) {

@@ -10,6 +10,14 @@
     margin-top: -30px;
     cursor: pointer;
   }
+
+  .btnNav{
+
+    padding: 10px;
+  }
+  .profilIcn{
+    margin-right: 18px;
+  }
   .navbar a {
     margin-bottom: 15px;
     text-decoration: none;
@@ -29,6 +37,9 @@
     height: 180px;
     margin-top: -30px;
     cursor: pointer;
+  }
+  .profilIcn{
+    margin-right: 25px;
   }
   .navbar a {
     text-decoration: none;

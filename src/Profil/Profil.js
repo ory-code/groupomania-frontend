@@ -26,7 +26,7 @@ const Profil = () => {
     <>
       <Navbar className="nav" />
       <div className="profilPage">
-        <h1>Salut {profil?.firstname} </h1>
+        <h1 className="profilH1">Salut {profil?.firstname} </h1>
         <div className="firstName">
           <p>test</p>
         </div>

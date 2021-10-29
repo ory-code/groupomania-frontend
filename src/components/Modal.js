@@ -49,7 +49,8 @@ const Modal = ({ showModal, setShowModal }) => {
                 className="mediaInput"
                 type="file"
                 name={img}
-                onChange={(e) => setImage(e.target.files[0])}
+                onChange={(e) => setImage(e.target.files[0].name)}
+               
               ></input>
             </div>
           </form>
