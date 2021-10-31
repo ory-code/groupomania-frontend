@@ -85,7 +85,7 @@ const OnePost = () => {
           </div>
         </div>
       )}
-      {userId == com.userid && (
+      {userId === com.userid && (
         <div className="buttonContainer">
           <div
             onClick={() => {
@@ -123,15 +123,15 @@ const OnePost = () => {
               <img className="" src={testImg} alt=""></img>
             </div>
             <div className="onePostCardText">
-              {postIsUpdated == false && (
+              {postIsUpdated === false && (
                 <p className="text">{onePost?.text}</p>
               )}
-              {postIsUpdated && postInUpdate?.id != onePost.id && (
+              {postIsUpdated && postInUpdate?.id !== onePost.id && (
                 <div className="text">
                   <p>{onePost.text}</p>
                 </div>
               )}
-              {postIsUpdated && postInUpdate?.id == onePost.id && (
+              {postIsUpdated && postInUpdate?.id === onePost.id && (
                 <div className="updateOnePost">
                   <textarea
                     defaultValue={onePost.text}
@@ -146,7 +146,7 @@ const OnePost = () => {
                   </div>
                 </div>
               )}
-              {userId == onePost && (
+              {userId === onePost && (
                 // userId == onePost.userid
                 <div className="buttonContainer">
                   <div

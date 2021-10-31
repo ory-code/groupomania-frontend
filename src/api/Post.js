@@ -17,16 +17,12 @@ export const getAllPost = async () => {
     });
 };
 
-
-
-
 export const newPost = async (formData) => {
   const tokenData = Store.getState().token;
-  console.log(formData);
   return await axios
     .post(`${process.env.REACT_APP_API_URL}posts`, formData, {
       headers: {
-        authorization: `Bearer ${tokenData}` 
+        authorization: `Bearer ${tokenData}`,
       },
     })
     .then((res) => {
@@ -34,10 +30,6 @@ export const newPost = async (formData) => {
     })
     .catch((err) => console.log(err));
 };
-
-
-
-
 
 export const getOnePost = async (id) => {
   const tokenData = Store.getState().token;
