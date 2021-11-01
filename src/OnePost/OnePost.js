@@ -32,7 +32,9 @@ const OnePost = () => {
     });
   });
   const updateMyPost = async () => {
-    updatePost(postInUpdate);
+    updatePost(postInUpdate).then(() => {
+      setOnePost({ ...onePost, text: postInUpdate.text });
+    });
   };
 
   const deleteMyPost = async (id) => {
@@ -41,13 +43,19 @@ const OnePost = () => {
 
   const createMyComment = async () => {
     const postid = onePost.id;
-    postComment({ userid: userId, content: content, postid: postid })
-    .then((comment) =>{
-      setComment([comment,...comment]);
-    })
+    postComment({ userid: userId, content: content, postid: postid }).then(
+      (comment) => {
+        setComment([comment, ...comment]);
+      }
+    );
   };
   const updateMyComment = async () => {
-    updateComment(commentInUpdate);
+    updateComment(commentInUpdate).then(() => {
+      let comments = comment.filter(
+        (comment) => comment.id != commentInUpdate.id
+      );
+      setComment({ ...comments, commentInUpdate });
+    });
   };
 
   const deleteMyComment = async (id) => {
@@ -129,12 +137,12 @@ const OnePost = () => {
               {postIsUpdated === false && (
                 <p className="text">{onePost?.text}</p>
               )}
-              {postIsUpdated && postInUpdate?.id !== onePost.id && (
+              {postIsUpdated && postInUpdate?.id !== onePost?.id && (
                 <div className="text">
                   <p>{onePost.text}</p>
                 </div>
               )}
-              {postIsUpdated && postInUpdate?.id === onePost.id && (
+              {postIsUpdated && postInUpdate?.id === onePost?.id && (
                 <div className="updateOnePost">
                   <textarea
                     defaultValue={onePost.text}
