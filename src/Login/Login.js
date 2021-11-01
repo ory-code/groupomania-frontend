@@ -10,8 +10,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  
- 
+
   const onSubmit = (e) => {
     e.preventDefault();
     login({
@@ -19,12 +18,20 @@ const Login = () => {
       password: password,
     })
       .then((res) => {
-        dispatch({
-          type: CONNECT,
-          payload: { token: res.token, userId: res.userId, isAdmin: res.isAdmin },
-        });
-        history.push("/posts");
-       
+        if (!res.token) {
+          alert("login failded");
+          history.push("/login");
+        } else {
+          dispatch({
+            type: CONNECT,
+            payload: {
+              token: res.token,
+              userId: res.userId,
+              isAdmin: res.isAdmin,
+            },
+          });
+          history.push("/posts");
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -36,7 +43,13 @@ const Login = () => {
       <header>
         <img src={logo} alt="logo groupomania"></img>
         <h1 className="loginH1">Connexion</h1>
-        <button onClick={()=> {history.push("/signup")}}>Vous n'avez pas de compte ?</button>
+        <button
+          onClick={() => {
+            history.push("/signup");
+          }}
+        >
+          Vous n'avez pas de compte ?
+        </button>
       </header>
 
       <form className="loginForm" onSubmit={onSubmit}>
