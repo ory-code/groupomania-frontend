@@ -6,6 +6,15 @@
     align-items: center;
     font-size: 30px;
   }
+  .profilPage h1 {
+    font-size: 40px;
+  }
+  .profilPage button {
+    height: 41px;
+    font-size: 15px;
+    background-color: rgb(233, 75, 75);
+    border-radius: 0.5rem;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -22,7 +31,28 @@
   }
   .profilPage button {
     height: 51px;
-    font-size:20px;
+    font-size: 20px;
+    background-color: rgb(233, 75, 75);
+    border-radius: 0.5rem;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .profilPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+  .profilPage h1 {
+    font-size: 50px;
+  }
+  .profilPage button {
+    cursor: pointer;
+    height: 51px;
+    font-size: 20px;
     background-color: rgb(233, 75, 75);
     border-radius: 0.5rem;
   }

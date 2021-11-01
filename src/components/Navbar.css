@@ -38,9 +38,15 @@
     margin-top: -30px;
     cursor: pointer;
   }
-  .profilIcn{
+    .navbar .profilIcn {
     margin-right: 25px;
+    font-size: 35px
   }
+    .navbar .logoutIcn {
+    margin-right: 25px;
+    font-size: 35px
+  }
+  
   .navbar a {
     text-decoration: none;
     font-size: 23px;

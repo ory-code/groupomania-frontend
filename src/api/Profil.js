@@ -3,7 +3,6 @@ import Store from "../reducers/index";
 
 export const getOneProfil = async (id) => {
   const tokenData = Store.getState().token;
-  console.log(id);
   return await axios
     .get(`${process.env.REACT_APP_API_URL}profil/${id}`, {
       headers: {
