@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Store from "../reducers/index";
-//import testimg from "../assets/datacenter.jpg"
 import { getAllPost, deletePost, updatePost } from "../api/Post";
 import UpdateIcon from "@mui/icons-material/Update";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -8,37 +7,25 @@ import "./Post.css";
 import { useHistory } from "react-router";
 import Loading from "./Loading";
 
-const Posts = () => {
+const Posts = (props) => {
   const adminData = Store.getState().isAdmin;
   const userId = Store.getState().userId;
   const History = useHistory();
-  const [loading, setLoading] = useState(true);
-  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  //const [posts, setPosts] = useState([]);
+  const posts = props.posts
   const [isUpdated, setIsUpdated] = useState(false);
   const [postInUpdate, SetPostInUpdate] = useState(null);
   const [shouldUpdate, setShouldUpdate] = useState(true);
 
-  useEffect(() => {
-    if (shouldUpdate === false) return;
-    getAllPost().then((res) => {
-      if (!res) return;
-      setLoading(false);
-      setPosts(res.data);
-      setShouldUpdate(false);
-    });
-  }, [shouldUpdate]);
+
+
+  
 
   const updateItem = async () => {
     updatePost(postInUpdate);
   };
-  const deleteItem = async (id) => {
-    deletePost({
-      userid: userId,
-      id: id,
-    }).then(() => {
-      setPosts(posts.filter((post) => post.id !== id));
-    });
-  };
+  
 
   return loading ? (
     <Loading />
@@ -90,7 +77,7 @@ const Posts = () => {
                 <DeleteIcon
                   className="icnDelete"
                   onClick={() => {
-                    deleteItem(post.id);
+                    props.deleteAPost(post.id);
                   }}
                 />
               </div>

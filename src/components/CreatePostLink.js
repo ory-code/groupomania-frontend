@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./CreatePostLink.css";
 import Modal from "./Modal.js"
 
-const CreatePostLink = () => {
+const CreatePostLink = (props) => {
   const [showModal, setShowModal] = useState(false);
   const openModal = () => {
     setShowModal((prev) => !prev);
   };
+  
+
   return (
     <div className="createPostPage">
       <div className="createPost">
@@ -17,7 +19,7 @@ const CreatePostLink = () => {
           <button onClick={openModal} className="inputPostArea" type="text">
             Quel sont les news ?
           </button>
-          <Modal  showModal={showModal} setShowModal={setShowModal} />
+          <Modal addPosts={props.addPosts} showModal={showModal} setShowModal={setShowModal} />
           <div className="inputMedia">
           </div>
         </div>

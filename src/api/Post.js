@@ -28,7 +28,7 @@ export const newPost = async (data) => {
       },
     })
     .then((res) => {
-      console.log(res);
+      return res.data
     })
     .catch((err) => console.log(err));
 };
@@ -59,7 +59,7 @@ export const updatePost = async (post) => {
       },
     })
     .then((res) => {
-      console.log(res);
+      return res
     })
     .catch((error) => {
       console.log(error);

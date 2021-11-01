@@ -3,9 +3,8 @@ import Store from "../reducers/index";
 
 import "./Modal.css";
 import CloseIcon from "@mui/icons-material/Close";
-import { newPost } from "../api/Post";
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal, addPosts }) => {
   const userId = Store.getState().userId;
   const [text, setText] = useState("");
   const [images, setImage] = useState(null);
@@ -15,7 +14,9 @@ const Modal = ({ showModal, setShowModal }) => {
     formData.append("userid", userId);
     formData.append("text", text);
     formData.append("images", images);
-    newPost(formData);
+    addPosts(formData);
+    setText("")
+    setImage(null)
     setShowModal(false);
   };
   return (

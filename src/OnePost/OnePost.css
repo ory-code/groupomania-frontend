@@ -1,84 +1,176 @@
-.showPost {
-  display: flex;
-  justify-content: center;
-}
-
-.onePostCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 20px;
-  background-color: white;
-  width: 450px;
-  border-radius: 1rem;
-}
-
-.onePostCardHeaders {
- padding: 0.5em 0.5em;
-}
-
-.imgOnePost {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 767px) {
+  .showPost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .onePostCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    background-color: white;
+    width: 290px;
+    border-radius: 1rem;
+  }
+  
+  .onePostCardHeaders {
+   padding: 0.5em 0.5em;
+  }
+  
+  .imgOnePost {
+    display: flex;
+    justify-content: center;
+    width: 290px;
+  }
+   img {
+    width: 290px;
+  }
+  
+  .onePostCardText {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
+  
+  .OnePostComment {
+    display: flex;
+    background-color: rgba(228, 226, 226, 0.712);
+    flex-direction: column;
+    border-radius: 0 0 1rem 1rem;
+    padding: 5px;
+  }
+  .OnePostComment p {
+    margin: 5px;
+  }
+  .postComment {
+    display: flex;
+    justify-content: space-evenly;
+    width: 275px;
+    padding: 5px;
+  }
+  
+  .postComment button {
+    cursor: pointer;
+    background-color: #091f43;
+    color: white;
+    border-radius: 0.2rem;
+  }
+  
+  .postComment .postCommentInput {
+    width: 270px;
+    font-family: "roboto";
+    white-space: initial;
+    resize: none;
+    padding: 5px;
+    border: none;
+    border-radius: 0.2rem;
+  }
+  
+  .updateCom textarea {
+    font-family: "roboto";
+    width: 275px;
+    white-space: initial;
+    resize: none;
+  }
+  
+  .buttonContainer .btn {
+    font-family: "roboto";
+    background-color:#091f43;
+    color: white;
+    border-radius: 0.2rem;
+    cursor: pointer;
+  }
+  
   
 }
- img {
-  width: 390px;
-}
 
-.onePostCardText {
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-}
 
-.OnePostComment {
-  display: flex;
-  background-color: rgba(228, 226, 226, 0.712);
-  flex-direction: column;
-  border-radius: 0 0 1rem 1rem;
-  width: 450px;
+@media screen and (min-width: 768px), (max-width: 1023px) {
+  .showPost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .onePostCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    background-color: white;
+    width: 490px;
+    border-radius: 1rem;
+  }
+  
+  .onePostCardHeaders {
+   padding: 0.5em 0.5em;
+  }
+  
+  .imgOnePost {
+    display: flex;
+    justify-content: center;
+    width: 480px;
+    padding: 5px;
+  }
+   img {
+    width: 470px;
+  }
+  
+  .onePostCardText {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
+  
+  .OnePostComment {
+    display: flex;
+    background-color: rgba(228, 226, 226, 0.712);
+    flex-direction: column;
+    border-radius: 0 0 1rem 1rem;
+    padding: 5px;
+  }
+  .OnePostComment p {
+    margin: 5px;
+  }
+  .postComment {
+    display: flex;
+    justify-content: space-evenly;
+    width: 490px;
+    padding: 5px;
+  }
+  
+  .postComment button {
+    cursor: pointer;
+    background-color: #091f43;
+    color: white;
+    border-radius: 0.2rem;
+  }
+  
+  .postComment .postCommentInput {
+    width: 350px;
+    font-family: "roboto";
+    white-space: initial;
+    resize: none;
+    padding: 5px;
+    border: none;
+    border-radius: 0.2rem;
+  }
+  
+  .updateCom textarea {
+    font-family: "roboto";
+    width: 390px;
+    white-space: initial;
+    resize: none;
+  }
+  
+  .buttonContainer .btn {
+    font-family: "roboto";
+    background-color:#091f43;
+    color: white;
+    border-radius: 0.2rem;
+    cursor: pointer;
+  }
+  
 }
-.OnePostComment p {
-  margin: 5px;
-}
-.postComment {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 5px;
-}
-
-.postComment button {
-  cursor: pointer;
-  background-color: #091f43;
-  color: white;
-  border-radius: 0.2rem;
-}
-
-.postComment .postCommentInput {
-  width: 75%;
-  font-family: "roboto";
-  white-space: initial;
-  resize: none;
-  padding: 5px;
-  border: none;
-  border-radius: 0.2rem;
-}
-
-.updateCom textarea {
-  font-family: "roboto";
-  width: 439px;
-  padding: 5px;
-  white-space: initial;
-  resize: none;
-}
-
-.buttonContainer .btn {
-  font-family: "roboto";
-  background-color:#091f43;
-  color: white;
-  border-radius: 0.2rem;
-  cursor: pointer;
-}
-

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Store from "../reducers/index";
-import testImg from "../assets/datacenter.jpg";
 
 import { useParams } from "react-router-dom";
 import { deletePost, getOnePost, updatePost } from "../api/Post";
@@ -14,8 +13,8 @@ const OnePost = () => {
   const myUserId = authData.userId;
   const userId = myUserId;
   const [onePost, setOnePost] = useState(null);
-  const [oneComment, setOneComment] = useState([]);
-  const [content, setComment] = useState("");
+  const [comment, setComment] = useState([]);
+  const [content, setContent] = useState("");
   const [postIsUpdated, setPostIsUpdated] = useState(false);
   const [postInUpdate, setPostInUpdate] = useState(null);
   const [commentIsUpdated, setCommentIsUpdated] = useState(false);
@@ -27,7 +26,7 @@ const OnePost = () => {
     getOnePost(id).then((res) => {
       if (!res && !res.data) return;
       setOnePost(res.data.post);
-      setOneComment(res.data.comment);
+      setComment(res.data.comment);
       setShouldUpdate(false);
     });
   });
@@ -41,7 +40,10 @@ const OnePost = () => {
 
   const createMyComment = async () => {
     const postid = onePost.id;
-    postComment({ userid: userId, content: content, postid: postid });
+    postComment({ userid: userId, content: content, postid: postid })
+    .then((comment) =>{
+      setComment([comment,...comment]);
+    })
   };
   const updateMyComment = async () => {
     updateComment(commentInUpdate);
@@ -54,7 +56,7 @@ const OnePost = () => {
     });
   };
 
-  const listComments = oneComment.map((com) => (
+  const listComments = comment.map((com) => (
     <div>
       <div className="pseudo">
         {com.User.firstname}
@@ -120,7 +122,7 @@ const OnePost = () => {
               </div>
             </div>
             <div className="imgOnePost">
-              <img className="" src={testImg} alt=""></img>
+              <img className="" src={onePost?.images} alt=""></img>
             </div>
             <div className="onePostCardText">
               {postIsUpdated === false && (
@@ -170,7 +172,7 @@ const OnePost = () => {
                 className="postCommentInput"
                 value={content}
                 placeholder=" écrit un commentaire..."
-                onChange={(e) => setComment(e.target.value)}
+                onChange={(e) => setContent(e.target.value)}
               ></textarea>
               <button className="btnComment" onClick={createMyComment}>
                 Envoyez
