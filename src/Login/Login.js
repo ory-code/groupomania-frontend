@@ -19,7 +19,7 @@ const Login = () => {
     })
       .then((res) => {
         if (!res.token) {
-          alert("login failded");
+          alert("Email ou mots de passe incorrect");
           history.push("/login");
         } else {
           dispatch({
