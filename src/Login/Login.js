@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { login } from "../api/Auth";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./Login.css";
 import logo from "../assets/icon-noir.png";
 import { CONNECT } from "../reducers/user";
@@ -10,6 +10,10 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+  const auth = useSelector((state) => state);
+  useEffect(() => {
+    if (auth.userId != null) history.push("/posts");
+  });
 
   const onSubmit = (e) => {
     e.preventDefault();

@@ -18,6 +18,16 @@ function Home() {
       setPosts([createdPost, ...posts]);
     });
   };
+
+const updatePosts = (post) => {
+  setPosts([post, ...posts.filter(p => post.id != p.id)]);
+  
+}
+
+
+
+
+
   const deleteMyPost = (id) => {
     deletePost({
       userid: userId,
@@ -43,7 +53,7 @@ function Home() {
         <h1 className="homeH1">Accueil</h1>
       </header>
       <CreatePostLink addPosts={addPosts} />
-      <Post posts={posts} deleteAPost={deleteMyPost} />
+      <Post posts={posts} deleteAPost={deleteMyPost} updatePost={updatePosts} />
       <ScrollTop showBelow={250} />
     </div>
   );

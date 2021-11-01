@@ -23,8 +23,10 @@ const Posts = (props) => {
   
 
   const updateItem = async () => {
-    updatePost(postInUpdate);
-  };
+    updatePost(postInUpdate).then(()=>{
+      props.updatePost(postInUpdate)
+      SetPostInUpdate(null)
+  })}
   
 
   return loading ? (
