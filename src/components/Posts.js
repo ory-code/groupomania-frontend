@@ -64,7 +64,7 @@ const Posts = (props) => {
                 </div>
               </div>
             )}
-            {(adminData === true || userId === post.userid) && (
+            {(adminData === true || userId === post.UserId) && (
               <div className="buttonContainer">
                 <div
                   onClick={() => {
