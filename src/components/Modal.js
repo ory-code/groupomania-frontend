@@ -16,9 +16,6 @@ const Modal = ({ showModal, setShowModal }) => {
     formData.append("text", text);
     formData.append("images", images);
     newPost(formData);
-
-    console.log(formData);
-
     setShowModal(false);
   };
   return (

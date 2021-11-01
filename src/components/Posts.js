@@ -54,7 +54,7 @@ const Posts = () => {
               </span>
             </div>
             <div className="impPost">
-              <img className="" src={post.img} alt=""></img>
+              <img className="" src={post.images} alt=""></img>
             </div>
             {isUpdated === false && <p className="text">{post.text}</p>}
             {isUpdated && postInUpdate?.id !== post.id && (

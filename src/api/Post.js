@@ -17,12 +17,14 @@ export const getAllPost = async () => {
     });
 };
 
-export const newPost = async (formData) => {
+export const newPost = async (data) => {
   const tokenData = Store.getState().token;
+  console.log(data);
   return await axios
-    .post(`${process.env.REACT_APP_API_URL}posts`, formData, {
+    .post(`${process.env.REACT_APP_API_URL}posts`, data, {
       headers: {
         authorization: `Bearer ${tokenData}`,
+        'Content-Type': 'multipart/form-data',
       },
     })
     .then((res) => {
