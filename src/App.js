@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import OnePost from "./OnePost/OnePost";
 import Home from "./Home/Home";
+import {GuardRoutes} from "./components/GuardRoutes";
 import Signup from "./Signup/Signup";
 import Login from "./Login/Login";
 import Profil from "./Profil/Profil";
@@ -11,11 +12,12 @@ function App() {
 
   return (
     <Router>
-      <Route path="/posts" exact render={() => <Home />}></Route>
+      <GuardRoutes path="/posts" exact auth={false} component={() => <Home />}></GuardRoutes>
       <Route path="/signup" exact render={() => <Signup />}></Route>
       <Route path="/login" exact render={() => <Login />}></Route>
-      <Route path="/profil/:id" exact render={() => <Profil />}></Route>
-      <Route path="/posts/:id" render={() => <OnePost />}></Route>
+      <GuardRoutes path="/profil/:id" exact auth={false} component={() => <Profil />}></GuardRoutes>
+      <GuardRoutes path="/posts/:id" auth={false}  component={() => <OnePost />}></GuardRoutes>
+      <GuardRoutes path="/" exact auth={false} component={() => <Home />}></GuardRoutes>
     </Router>
   );
 }

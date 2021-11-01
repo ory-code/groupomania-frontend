@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import Store from "../reducers/index";
-
+import { useHistory } from "react-router";
 import { useParams } from "react-router-dom";
 import { deletePost, getOnePost, updatePost } from "../api/Post";
 import { postComment, updateComment, deleteComment } from "../api/Comment";
@@ -9,6 +9,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import "./OnePost.css";
 import Navbar from "../components/Navbar";
 const OnePost = () => {
+  const History = useHistory();
+
   const adminData = Store.getState().isAdmin;
   const authData = Store.getState();
   const myUserId = authData.userId;
@@ -34,18 +36,22 @@ const OnePost = () => {
   const updateMyPost = async () => {
     updatePost(postInUpdate).then(() => {
       setOnePost({ ...onePost, text: postInUpdate.text });
+      setPostIsUpdated(!postIsUpdated);
+
     });
   };
 
   const deleteMyPost = async (id) => {
-    deletePost({ userid: userId, id: id });
+    deletePost({ userid: userId, id: id }).then(()=>{
+      History.push("/posts")
+    })
   };
 
   const createMyComment = async () => {
     const postid = onePost.id;
     postComment({ userid: userId, content: content, postid: postid }).then(
-      (comment) => {
-        setComment([comment, ...comment]);
+      (newComment) => {
+        setComment([newComment, ...comment]);
       }
     );
   };
@@ -54,7 +60,9 @@ const OnePost = () => {
       let comments = comment.filter(
         (comment) => comment.id != commentInUpdate.id
       );
-      setComment({ ...comments, commentInUpdate });
+      setComment([ ...comments, commentInUpdate ]);
+      setCommentIsUpdated(!commentIsUpdated);
+
     });
   };
 
@@ -62,7 +70,9 @@ const OnePost = () => {
     deleteComment({
       userid: userId,
       id: id,
-    });
+    }).then(() => {
+      setComment( comment.filter( comment => comment.id != id))
+    })
   };
 
   const listComments = comment.map((com) => (
