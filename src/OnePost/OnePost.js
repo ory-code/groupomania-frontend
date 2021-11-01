@@ -9,6 +9,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import "./OnePost.css";
 import Navbar from "../components/Navbar";
 const OnePost = () => {
+  const adminData = Store.getState().isAdmin;
   const authData = Store.getState();
   const myUserId = authData.userId;
   const userId = myUserId;
@@ -87,7 +88,7 @@ const OnePost = () => {
           </div>
         </div>
       )}
-      {userId === com.userid && (
+      {userId === com.UserId && (
         <div className="buttonContainer">
           <div
             onClick={() => {
@@ -148,7 +149,7 @@ const OnePost = () => {
                   </div>
                 </div>
               )}
-              {userId === onePost && (
+              {(adminData === true || userId === onePost.UserId) && (
                 <div className="buttonContainer">
                   <div
                     onClick={() => {
