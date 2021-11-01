@@ -9,7 +9,6 @@ const Profil = () => {
   const [profil, setProfil] = useState(null);
   const { id } = useParams();
   const [shouldUpdate, setShouldUpdate] = useState(true);
-  console.log( {"toto": profil});
   useEffect(() => {
     if (shouldUpdate === false) return;
     getOneProfil(id).then((res) => {
@@ -27,12 +26,6 @@ const Profil = () => {
       <Navbar className="nav" />
       <div className="profilPage">
         <h1 className="profilH1">Salut {profil?.firstname} </h1>
-        <div className="firstName">
-          <p>test</p>
-        </div>
-        <div className="name">
-          <p>lala</p>
-        </div>
         <div className="deleteProfil">
           <button
             className="deleteProfilBtn"

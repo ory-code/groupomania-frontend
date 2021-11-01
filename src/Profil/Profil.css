@@ -1,9 +1,29 @@
+@media screen and (max-width: 768px) {
+  .profilPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+}
 
-
-
-.profilPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .profilPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 250px;
+    font-size: 25px;
+  }
+  .profilPage h1 {
+    font-size: 60px;
+  }
+  .profilPage button {
+    height: 51px;
+    font-size:20px;
+    background-color: rgb(233, 75, 75);
+    border-radius: 0.5rem;
+  }
 }
