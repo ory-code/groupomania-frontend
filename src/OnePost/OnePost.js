@@ -25,7 +25,7 @@ const OnePost = () => {
   useEffect(() => {
     if (shouldUpdate === false) return;
     getOnePost(id).then((res) => {
-      if (!res && !res.data) return; //&& !res.data
+      if (!res && !res.data) return;
       setOnePost(res.data.post);
       setOneComment(res.data.comment);
       setShouldUpdate(false);
@@ -147,7 +147,6 @@ const OnePost = () => {
                 </div>
               )}
               {userId === onePost && (
-                // userId == onePost.userid
                 <div className="buttonContainer">
                   <div
                     onClick={() => {

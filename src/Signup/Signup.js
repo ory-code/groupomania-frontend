@@ -10,16 +10,15 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const history = useHistory();
 
-  
-
   const onSubmit = async (e) => {
     e.preventDefault();
+
     signUp({
       firstname: firstname,
       name: name,
       email: email,
       password: password,
-    });
+    })
     history.push("/login");
   };
 
@@ -28,7 +27,13 @@ const Signup = () => {
       <div className="header">
         <img src={logo} alt="logo groupomania"></img>
         <h1 className="signupH1"> Inscription </h1>
-        <button onClick={()=> {history.push("/login")}}>Vous avez déjà un compte ?</button>
+        <button
+          onClick={() => {
+            history.push("/login");
+          }}
+        >
+          Vous avez déjà un compte ?
+        </button>
       </div>
       <form className="signup" onSubmit={onSubmit}>
         <input
@@ -36,6 +41,7 @@ const Signup = () => {
           type="text"
           placeholder="Prénom"
           value={firstname}
+          required
           onChange={(e) => setFirstName(e.target.value)}
         />
         <input
@@ -43,6 +49,7 @@ const Signup = () => {
           type="text"
           placeholder="Nom"
           value={name}
+          required
           onChange={(e) => setName(e.target.value)}
         />
         <input
@@ -50,6 +57,7 @@ const Signup = () => {
           type="email"
           placeholder="Email"
           value={email}
+          required
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
@@ -57,6 +65,7 @@ const Signup = () => {
           type="password"
           placeholder="Mots de passe"
           value={password}
+          required
           onChange={(e) => setPassword(e.target.value)}
         />
         <input className="btnSign" type="submit" />
