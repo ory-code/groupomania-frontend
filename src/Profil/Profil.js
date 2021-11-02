@@ -19,10 +19,13 @@ const Profil = () => {
     });
   });
 
-  const deleteMyProfil = async (e,id) => {
-    e.preventDefault();
-    deleteProfil(id);
-    History.push("/login")
+  const deleteMyProfil = async (id,e) => {
+    e.preventDefault()
+    deleteProfil(id)
+    .then(()=>{
+      alert("Votre profil est supprimer")
+      History.push("/login")
+    })
   };
 
   return (
