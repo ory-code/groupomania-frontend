@@ -128,7 +128,7 @@ const OnePost = () => {
   ));
 
   return (
-    <div>
+    <div className="thePost">
       <Navbar />
       <div className="onePostContent">
         <div className="showPost">

@@ -1,5 +1,7 @@
 @media screen and (max-width: 767px) {
- 
+ .thePost{
+   margin: 0 auto;
+ }
 
   .onePostContent .showPost {
     display: flex;
@@ -13,7 +15,7 @@
     justify-content: center;
     margin: 20px;
     background-color: white;
-    width: 290px;
+    max-width: 290px;
     border-radius: 1rem;
   }
 
@@ -22,11 +24,11 @@
   }
 
   .onePostContent .onePostCard .imgOnePost {
-    width: 282px;
+    max-width: 282px;
     padding: 5px;
   }
   .onePostContent .onePostCard img {
-    width: 281px;
+    max-width: 281px;
   }
 
   .onePostContent .onePostCard .onePostCardText {
@@ -34,10 +36,15 @@
     flex-direction: column;
     padding: 5px;
   }
+  .onePostContent .onePostCard .onePostCardText .textOnePost {
+    white-space: normal;
+    
+    word-break: break-all;
+}
 
   .onePostContent .onePostCard .updateOnePost textarea {
     resize: none;
-    width: 274px;
+    max-width: 274px;
   }
 
   .onePostContent .onePostCard .buttonContainerOnePost {
@@ -54,12 +61,13 @@
     padding: 5px;
   }
   .onePostContent .onePostCard .OnePostComment p {
-    margin: 5px;
+    white-space: normal;
+    word-break: break-all;
   }
   .onePostContent .onePostCard .postComment {
     display: flex;
     justify-content: space-evenly;
-    width: 275px;
+    max-width: 275px;
     padding: 5px;
   }
 
@@ -71,7 +79,7 @@
   }
 
   .onePostContent .onePostCard .postComment .postCommentInput {
-    width: 270px;
+    max-width: 270px;
     font-family: "roboto";
     white-space: initial;
     resize: none;
@@ -133,7 +141,7 @@
   }
   .onePostContent .onePostCard .onePostCardText .textOnePost {
     white-space: normal;
-    width: 375px;
+    word-break: break-all;
   }
   .onePostContent .onePostCard .updateOnePost textarea {
     resize: none;
@@ -156,7 +164,8 @@
     padding: 5px;
   }
   .onePostContent  .onePostCard .OnePostComment p {
-    margin: 5px;
+    white-space: normal;
+    word-break: break-all;
   }
   .onePostContent  .onePostCard .postComment {
     display: flex;
@@ -258,7 +267,8 @@
     padding: 5px;
   }
   .onePostCard .OnePostComment p {
-    margin: 5px;
+    white-space: normal;
+    word-break: break-all;
   }
   .onePostCard .postComment {
     display: flex;

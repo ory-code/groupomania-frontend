@@ -40,10 +40,10 @@
     white-space: initial;
     resize: none;
   }
-  .text {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+ .allPost p {
+   max-width: 275px;
+   white-space: normal;
+   word-break: break-all;
   }
   .buttonContainer {
     display: flex;
@@ -77,11 +77,6 @@
   }
   
 }
-
-
-
-
-
 
 .post-list {
   display: flex;
@@ -126,10 +121,8 @@
   resize: none;
 }
 .text {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
+  white-space: normal;
+  word-break: break-all;}
 .buttonContainer {
   display: flex;
   justify-content: flex-end;
