@@ -106,7 +106,7 @@ const OnePost = () => {
           </div>
         </div>
       )}
-      {userId === com.UserId && (
+      {(adminData === true || userId === com.UserId) && (
         <div className="buttonContainer">
           <div
             onClick={() => {
