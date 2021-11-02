@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Store from "../reducers/index";
-import { getAllPost, deletePost, updatePost } from "../api/Post";
+import { updatePost } from "../api/Post";
 import UpdateIcon from "@mui/icons-material/Update";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./Post.css";
@@ -12,11 +12,9 @@ const Posts = (props) => {
   const userId = Store.getState().userId;
   const History = useHistory();
   const [loading, setLoading] = useState(false);
-  //const [posts, setPosts] = useState([]);
   const posts = props.posts
   const [isUpdated, setIsUpdated] = useState(false);
   const [postInUpdate, SetPostInUpdate] = useState(null);
-  const [shouldUpdate, setShouldUpdate] = useState(true);
 
 
 
