@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router";
 import { deleteProfil, getOneProfil } from "../api/Profil";
 import "./Profil.css";
 import Navbar from "../components/Navbar";
@@ -8,6 +9,7 @@ const Profil = () => {
   
   const [profil, setProfil] = useState(null);
   const { id } = useParams();
+  const History = useHistory();
   const [shouldUpdate, setShouldUpdate] = useState(true);
   useEffect(() => {
     if (shouldUpdate === false) return;
@@ -19,6 +21,7 @@ const Profil = () => {
 
   const deleteMyProfil = async (id) => {
     deleteProfil(id);
+    History.push("/login")
   };
 
   return (
