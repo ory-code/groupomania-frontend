@@ -19,7 +19,8 @@ const Profil = () => {
     });
   });
 
-  const deleteMyProfil = async (id) => {
+  const deleteMyProfil = async (e,id) => {
+    e.preventDefault();
     deleteProfil(id);
     History.push("/login")
   };
