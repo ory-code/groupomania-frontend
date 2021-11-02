@@ -36,7 +36,7 @@ const Modal = ({ showModal, setShowModal, addPosts }) => {
               <textarea
                 className="modalInput"
                 value={text}
-                placeholder="De quoi souhaite-tu discuter ?"
+                placeholder="De quoi souhaites-tu discuter ?"
                 onChange={(e) => setText(e.target.value)}
               ></textarea>
             </div>
