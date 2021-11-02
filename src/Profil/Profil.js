@@ -19,8 +19,7 @@ const Profil = () => {
     });
   });
 
-  const deleteMyProfil = async (id,e) => {
-    e.preventDefault()
+  const deleteMyProfil = async (id) => {
     deleteProfil(id)
     .then(()=>{
       alert("Votre profil est supprimer")
