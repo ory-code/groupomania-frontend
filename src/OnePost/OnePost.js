@@ -58,7 +58,7 @@ const OnePost = () => {
   const updateMyComment = async () => {
     updateComment(commentInUpdate).then(() => {
       let comments = comment.filter(
-        (comment) => comment.id != commentInUpdate.id
+        (comment) => comment.id !== commentInUpdate.id
       );
       setComment([ ...comments, commentInUpdate ]);
       setCommentIsUpdated(!commentIsUpdated);
@@ -71,7 +71,7 @@ const OnePost = () => {
       userid: userId,
       id: id,
     }).then(() => {
-      setComment( comment.filter( comment => comment.id != id))
+      setComment( comment.filter( comment => comment.id !== id))
     })
   };
 
@@ -130,7 +130,7 @@ const OnePost = () => {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className="onePostContent">
         <div className="showPost">
           <div className="onePostCard">
             <div className="onePostCardHeaders">
@@ -145,10 +145,10 @@ const OnePost = () => {
             </div>
             <div className="onePostCardText">
               {postIsUpdated === false && (
-                <p className="text">{onePost?.text}</p>
+                <p className="textOnePost">{onePost?.text}</p>
               )}
               {postIsUpdated && postInUpdate?.id !== onePost?.id && (
-                <div className="text">
+                <div className="textOnePost">
                   <p>{onePost.text}</p>
                 </div>
               )}
@@ -168,7 +168,7 @@ const OnePost = () => {
                 </div>
               )}
               {(adminData === true || userId === onePost?.UserId) && (
-                <div className="buttonContainer">
+                <div className="buttonContainerOnePost">
                   <div
                     onClick={() => {
                       setPostIsUpdated(!postIsUpdated);

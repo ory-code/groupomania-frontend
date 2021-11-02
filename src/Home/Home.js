@@ -6,6 +6,8 @@ import CreatePostLink from "../components/CreatePostLink";
 import ScrollTop from "../components/ScrollTop";
 import "./Home.css";
 import Post from "../components/Posts";
+import Loading from "../components/Loading";
+
 function Home() {
   const userId = Store.getState().userId;
 
@@ -20,7 +22,7 @@ function Home() {
   };
 
 const updatePosts = (post) => {
-  setPosts([post, ...posts.filter(p => post.id != p.id)]);
+  setPosts([post, ...posts.filter(p => post.id !== p.id)]);
   
 }
 
@@ -44,9 +46,9 @@ const updatePosts = (post) => {
       setLoading(false);
       setPosts(res.data);
     });
-  }, [posts]);
+  }, [shouldUpdate]);
 
-  return (
+  return loading ? (<Loading/>) : (
     <div className="homePage">
       <Navbar />
       <header className="homeHeader">

@@ -1,11 +1,13 @@
 @media screen and (max-width: 767px) {
-  .showPost {
+ 
+
+  .onePostContent .showPost {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  .onePostCard {
+
+  .onePostContent .showPost .onePostCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,51 +16,61 @@
     width: 290px;
     border-radius: 1rem;
   }
-  
-  .onePostCardHeaders {
-   padding: 0.5em 0.5em;
+
+  .onePostContent .onePostCard .onePostCardHeaders {
+    padding: 0.5em 0.5em;
   }
-  
-  .imgOnePost {
-    display: flex;
-    justify-content: center;
-    width: 290px;
-  }
-   img {
-    width: 290px;
-  }
-  
-  .onePostCardText {
-    display: flex;
-    justify-content: center;
+
+  .onePostContent .onePostCard .imgOnePost {
+    width: 282px;
     padding: 5px;
   }
-  
-  .OnePostComment {
+  .onePostContent .onePostCard img {
+    width: 281px;
+  }
+
+  .onePostContent .onePostCard .onePostCardText {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .onePostContent .onePostCard .updateOnePost textarea {
+    resize: none;
+    width: 274px;
+  }
+
+  .onePostContent .onePostCard .buttonContainerOnePost {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+  }
+
+  .onePostContent .onePostCard .OnePostComment {
     display: flex;
     background-color: rgba(228, 226, 226, 0.712);
     flex-direction: column;
     border-radius: 0 0 1rem 1rem;
     padding: 5px;
   }
-  .OnePostComment p {
+  .onePostContent .onePostCard .OnePostComment p {
     margin: 5px;
   }
-  .postComment {
+  .onePostContent .onePostCard .postComment {
     display: flex;
     justify-content: space-evenly;
     width: 275px;
     padding: 5px;
   }
-  
-  .postComment button {
+
+  .onePostContent .onePostCard .postComment button {
     cursor: pointer;
     background-color: #091f43;
     color: white;
     border-radius: 0.2rem;
   }
-  
-  .postComment .postCommentInput {
+
+  .onePostContent .onePostCard .postComment .postCommentInput {
     width: 270px;
     font-family: "roboto";
     white-space: initial;
@@ -67,89 +79,101 @@
     border: none;
     border-radius: 0.2rem;
   }
-  
-  .updateCom textarea {
+
+  .onePostContent .onePostCard .updateCom textarea {
     font-family: "roboto";
     width: 275px;
     white-space: initial;
     resize: none;
   }
-  
-  .buttonContainer .btn {
+
+  .onePostContent .onePostCardText .buttonContainer .btn {
     font-family: "roboto";
-    background-color:#091f43;
+    background-color: #091f43;
     color: white;
     border-radius: 0.2rem;
     cursor: pointer;
   }
-  
-  
 }
 
-
 @media screen and (min-width: 768px), (max-width: 1023px) {
-  .showPost {
+  .onePostContent .showPost {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  .onePostCard {
+
+  .onePostContent .showPost .onePostCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 20px;
     background-color: white;
-    width: 490px;
+    width: 400px;
     border-radius: 1rem;
   }
-  
-  .onePostCardHeaders {
-   padding: 0.5em 0.5em;
+
+  .onePostContent .onePostCard .onePostCardHeaders {
+    padding: 0.5em 0.5em;
   }
-  
-  .imgOnePost {
-    display: flex;
-    justify-content: center;
-    width: 480px;
+
+  .onePostContent .onePostCard .imgOnePost {
+    width: 390px;
     padding: 5px;
   }
-   img {
-    width: 470px;
+  .onePostContent .onePostCard img {
+    width: 390px;
   }
-  
-  .onePostCardText {
+
+  .onePostContent .onePostCard .onePostCardText {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 20px;
+  }
+  .onePostContent .onePostCard .onePostCardText .textOnePost {
+    white-space: normal;
+    width: 375px;
+  }
+  .onePostContent .onePostCard .updateOnePost textarea {
+    resize: none;
+    width: 375px;
+    font-size: 20px;
+    white-space: initial;
+  }
+
+  .onePostContent  .onePostCard .buttonContainerOnePost {
+    display: flex;
+    justify-content: flex-end;
     padding: 5px;
   }
-  
-  .OnePostComment {
+
+  .onePostContent  .onePostCard .OnePostComment {
     display: flex;
     background-color: rgba(228, 226, 226, 0.712);
     flex-direction: column;
     border-radius: 0 0 1rem 1rem;
     padding: 5px;
   }
-  .OnePostComment p {
+  .onePostContent  .onePostCard .OnePostComment p {
     margin: 5px;
   }
-  .postComment {
+  .onePostContent  .onePostCard .postComment {
     display: flex;
     justify-content: space-evenly;
-    width: 490px;
+    width: 380px;
     padding: 5px;
   }
-  
-  .postComment button {
+
+  .onePostContent .onePostCard .postComment button {
     cursor: pointer;
     background-color: #091f43;
     color: white;
     border-radius: 0.2rem;
   }
-  
-  .postComment .postCommentInput {
-    width: 350px;
+
+  .onePostContent .onePostCard .postComment .postCommentInput {
+    width: 375px;
     font-family: "roboto";
     white-space: initial;
     resize: none;
@@ -157,20 +181,121 @@
     border: none;
     border-radius: 0.2rem;
   }
-  
-  .updateCom textarea {
+
+  .onePostContent .onePostCard .updateCom textarea {
     font-family: "roboto";
-    width: 390px;
+    width: 275px;
     white-space: initial;
     resize: none;
   }
-  
-  .buttonContainer .btn {
+
+  .onePostContent .onePostCardText .buttonContainer .btn {
     font-family: "roboto";
-    background-color:#091f43;
+    background-color: #091f43;
     color: white;
     border-radius: 0.2rem;
     cursor: pointer;
   }
-  
+}
+
+@media screen and (min-width: 1024px) {
+  .showPost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .showPost .onePostCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    background-color: white;
+    width: 400px;
+    border-radius: 1rem;
+  }
+
+  .onePostCard .onePostCardHeaders {
+    padding: 0.5em 0.5em;
+  }
+
+  .onePostCard .imgOnePost {
+    width: 390px;
+    padding: 5px;
+  }
+  .onePostCard img {
+    width: 390px;
+  }
+
+  .onePostCard .onePostCardText {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 20px;
+  }
+  .onePostCard .onePostCardText .textOnePost {
+    white-space: normal;
+    width: 375px;
+  }
+  .onePostCard .updateOnePost textarea {
+    resize: none;
+    width: 375px;
+    font-size: 20px;
+    white-space: initial;
+  }
+
+  .onePostCard .buttonContainerOnePost {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+  }
+
+  .onePostCard .OnePostComment {
+    display: flex;
+    background-color: rgba(228, 226, 226, 0.712);
+    flex-direction: column;
+    border-radius: 0 0 1rem 1rem;
+    padding: 5px;
+  }
+  .onePostCard .OnePostComment p {
+    margin: 5px;
+  }
+  .onePostCard .postComment {
+    display: flex;
+    justify-content: space-evenly;
+    width: 380px;
+    padding: 5px;
+  }
+
+  .onePostCard .postComment button {
+    cursor: pointer;
+    background-color: #091f43;
+    color: white;
+    border-radius: 0.2rem;
+  }
+
+  .onePostCard .postComment .postCommentInput {
+    width: 375px;
+    font-family: "roboto";
+    white-space: initial;
+    resize: none;
+    padding: 5px;
+    border: none;
+    border-radius: 0.2rem;
+  }
+
+  .onePostCard .updateCom textarea {
+    font-family: "roboto";
+    width: 275px;
+    white-space: initial;
+    resize: none;
+  }
+
+  .onePostCardText .buttonContainer .btn {
+    font-family: "roboto";
+    background-color: #091f43;
+    color: white;
+    border-radius: 0.2rem;
+    cursor: pointer;
+  }
 }

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
+import { useDispatch } from "react-redux";
 import { deleteProfil, getOneProfil } from "../api/Profil";
 import "./Profil.css";
 import Navbar from "../components/Navbar";
 import { useParams } from "react-router";
+import { DISCONNECT } from "../reducers/user";
 
 const Profil = () => {
-  
+  const dispatch = useDispatch()
   const [profil, setProfil] = useState(null);
   const { id } = useParams();
   const History = useHistory();
@@ -20,9 +22,11 @@ const Profil = () => {
   });
 
   const deleteMyProfil = async (id) => {
+    
     deleteProfil(id)
     .then(()=>{
       alert("Votre profil est supprimer")
+      dispatch({ type: DISCONNECT})
       History.push("/login")
     })
   };
@@ -35,9 +39,7 @@ const Profil = () => {
         <div className="deleteProfil">
           <button
             className="deleteProfilBtn"
-            onClick={() => {
-              deleteMyProfil(id);
-            }}
+            onClick={deleteMyProfil(id)}
           >
             Supprimer mon compte
           </button>

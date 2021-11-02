@@ -5,13 +5,13 @@ import UpdateIcon from "@mui/icons-material/Update";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./Post.css";
 import { useHistory } from "react-router";
-import Loading from "./Loading";
+//import Loading from "./Loading";
 
 const Posts = (props) => {
   const adminData = Store.getState().isAdmin;
   const userId = Store.getState().userId;
   const History = useHistory();
-  const [loading, setLoading] = useState(false);
+  //const [loading, setLoading] = useState(false);
   const posts = props.posts
   const [isUpdated, setIsUpdated] = useState(false);
   const [postInUpdate, SetPostInUpdate] = useState(null);
@@ -27,9 +27,7 @@ const Posts = (props) => {
   })}
   
 
-  return loading ? (
-    <Loading />
-  ) : (
+  return  (
     <section className="post-list">
       <h2>Posts</h2>
       <div className="allPost">

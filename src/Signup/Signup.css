@@ -15,6 +15,15 @@
     width: 200px;
     height: 200px;
   }
+  .header button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #091f43;
+    border-radius: 1.5rem;
+    height: 20px;
+      }
+    
 
   .signup {
     display: flex;
@@ -88,6 +97,15 @@
     height: 250px;
     margin-top: -40px;
   }
+  .header button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #091f43;
+    border-radius: 1.5rem;
+    height: 30px;
+      }
+    
 
   .signup {
     display: flex;
