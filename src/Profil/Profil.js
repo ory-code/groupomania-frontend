@@ -8,7 +8,7 @@ import { useParams } from "react-router";
 import { DISCONNECT } from "../reducers/user";
 
 const Profil = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [profil, setProfil] = useState(null);
   const { id } = useParams();
   const History = useHistory();
@@ -22,13 +22,7 @@ const Profil = () => {
   });
 
   const deleteMyProfil = async (id) => {
-    
-    deleteProfil(id)
-    .then(()=>{
-      alert("Votre profil est supprimer")
-      dispatch({ type: DISCONNECT})
-      History.push("/login")
-    })
+    deleteProfil(id);
   };
 
   return (
@@ -39,7 +33,12 @@ const Profil = () => {
         <div className="deleteProfil">
           <button
             className="deleteProfilBtn"
-            onClick={deleteMyProfil(id)}
+            onClick={() => {
+              deleteMyProfil(id);
+              alert("Votre profil est supprimer");
+              dispatch({ type: DISCONNECT });
+              History.push("/login");
+            }}
           >
             Supprimer mon compte
           </button>
