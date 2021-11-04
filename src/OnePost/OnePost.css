@@ -46,7 +46,10 @@
     resize: none;
     max-width: 274px;
   }
-
+.onePostCard  .btnWCAG {
+  background-color: #1fe0;
+  border: none;
+}
   .onePostContent .onePostCard .buttonContainerOnePost {
     display: flex;
     justify-content: flex-end;
@@ -142,6 +145,10 @@
   .onePostContent .onePostCard .onePostCardText .textOnePost {
     white-space: normal;
     word-break: break-all;
+  }
+  .onePostCard  .btnWCAG {
+    background-color: #1fe0;
+    border: none;
   }
   .onePostContent .onePostCard .updateOnePost textarea {
     resize: none;
@@ -252,7 +259,10 @@
     font-size: 20px;
     white-space: initial;
   }
-
+  .onePostCard  .btnWCAG {
+    background-color: #1fe0;
+    border: none;
+  }
   .onePostCard .buttonContainerOnePost {
     display: flex;
     justify-content: flex-end;

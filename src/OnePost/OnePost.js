@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Store from "../reducers/index";
 import { useHistory } from "react-router";
 import { useParams } from "react-router-dom";
@@ -37,14 +37,13 @@ const OnePost = () => {
     updatePost(postInUpdate).then(() => {
       setOnePost({ ...onePost, text: postInUpdate.text });
       setPostIsUpdated(!postIsUpdated);
-
     });
   };
 
   const deleteMyPost = async (id) => {
-    deletePost({ userid: userId, id: id }).then(()=>{
-      History.push("/posts")
-    })
+    deletePost({ userid: userId, id: id }).then(() => {
+      History.push("/posts");
+    });
   };
 
   const createMyComment = async () => {
@@ -60,9 +59,8 @@ const OnePost = () => {
       let comments = comment.filter(
         (comment) => comment.id !== commentInUpdate.id
       );
-      setComment([ ...comments, commentInUpdate ]);
+      setComment([...comments, commentInUpdate]);
       setCommentIsUpdated(!commentIsUpdated);
-
     });
   };
 
@@ -71,8 +69,8 @@ const OnePost = () => {
       userid: userId,
       id: id,
     }).then(() => {
-      setComment( comment.filter( comment => comment.id !== id))
-    })
+      setComment(comment.filter((comment) => comment.id !== id));
+    });
   };
 
   const listComments = comment.map((com) => (
@@ -108,20 +106,21 @@ const OnePost = () => {
       )}
       {(adminData === true || userId === com.UserId) && (
         <div className="buttonContainer">
-          <div
+          <button className="btnWCAG"
             onClick={() => {
               setCommentIsUpdated(!commentIsUpdated);
               setCommentInUpdate(com);
             }}
           >
             <UpdateIcon className="icnUpdate" />
-          </div>
-          <DeleteIcon
-            className="icnDelete"
+          </button>
+          <button className="btnWCAG"
             onClick={() => {
               deleteMyComment(com.id);
             }}
-          />
+          >
+            <DeleteIcon className="icnDelete" />
+          </button>
         </div>
       )}
     </div>
@@ -169,20 +168,21 @@ const OnePost = () => {
               )}
               {(adminData === true || userId === onePost?.UserId) && (
                 <div className="buttonContainerOnePost">
-                  <div
+                  <button className="btnWCAG"
                     onClick={() => {
                       setPostIsUpdated(!postIsUpdated);
                       setPostInUpdate(onePost);
                     }}
                   >
                     <UpdateIcon className="icnUpdate" />
-                  </div>
-                  <DeleteIcon
-                    className="icnDelete"
+                  </button>
+                  <button className="btnWCAG"
                     onClick={() => {
                       deleteMyPost(onePost.id);
                     }}
-                  />
+                  >
+                    <DeleteIcon className="icnDelete" />
+                  </button>
                 </div>
               )}
             </div>

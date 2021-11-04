@@ -11,6 +11,11 @@
     cursor: pointer;
   }
 
+  .navbar  .btnWCAG {
+    background-color: #1fe0;
+    border: none;
+  }
+
   .btnNav{
 
     padding: 10px;
@@ -37,6 +42,10 @@
     height: 180px;
     margin-top: -30px;
     cursor: pointer;
+  }
+  .navbar  .btnWCAG {
+    background-color: #1fe0;
+    border: none;
   }
     .navbar .profilIcn {
     margin-right: 25px;
@@ -67,6 +76,11 @@
   .navbar a {
     text-decoration: none;
 
+  }
+
+  .btnWCAG {
+    background-color: #1fe0;
+    border: none;
   }
   
 

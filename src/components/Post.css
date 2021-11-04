@@ -29,6 +29,10 @@
  .allPost .impPost img {
     width: 270px;
   }
+  .allPost  .btnWCAG {
+    background-color: #1fe0;
+    border: none;
+  }
   
   .updatePost {
     display: flex;
@@ -113,6 +117,10 @@
 .updatePost {
   display: flex;
   flex-direction: column;
+}
+.btnWCAG {
+  background-color: #1fe0;
+  border: none;
 }
 .updatePost textarea {
   font-family: "roboto";

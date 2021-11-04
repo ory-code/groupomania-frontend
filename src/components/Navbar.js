@@ -26,16 +26,21 @@ const Navbar = () => {
   };
   return (
     <nav className="navbar">
-      <img onClick={goHome} src={logo} alt="logo groupomania"></img>
+      <button className="btnWCAG" onClick={goHome}>
+        <img src={logo} alt="logo groupomania"></img>
+      </button>
       <div className="btnNav">
-        <AccountBoxIcon
-          className="profilIcn"
+        <button
+          className="btnWCAG"
           onClick={() => {
             history.push(`/profil/${userId}`);
           }}
-        />
-
-        <LogoutIcon onClick={logout} className="logoutIcn" />
+        >
+          <AccountBoxIcon className="profilIcn" />
+        </button>
+        <button className="btnWCAG" onClick={logout}>
+          <LogoutIcon className="logoutIcn" />{" "}
+        </button>
       </div>
     </nav>
   );

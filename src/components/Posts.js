@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Store from "../reducers/index";
 import { updatePost } from "../api/Post";
 import UpdateIcon from "@mui/icons-material/Update";
@@ -12,22 +12,18 @@ const Posts = (props) => {
   const userId = Store.getState().userId;
   const History = useHistory();
   //const [loading, setLoading] = useState(false);
-  const posts = props.posts
+  const posts = props.posts;
   const [isUpdated, setIsUpdated] = useState(false);
   const [postInUpdate, SetPostInUpdate] = useState(null);
 
-
-
-  
-
   const updateItem = async () => {
-    updatePost(postInUpdate).then(()=>{
-      props.updatePost(postInUpdate)
-      SetPostInUpdate(null)
-  })}
-  
+    updatePost(postInUpdate).then(() => {
+      props.updatePost(postInUpdate);
+      SetPostInUpdate(null);
+    });
+  };
 
-  return  (
+  return (
     <section className="post-list">
       <h2>Posts</h2>
       <div className="allPost">
@@ -64,31 +60,32 @@ const Posts = (props) => {
             )}
             {(adminData === true || userId === post.UserId) && (
               <div className="buttonContainer">
-                <div
+                <button className="btnWCAG"
                   onClick={() => {
                     setIsUpdated(!isUpdated);
                     SetPostInUpdate(post);
                   }}
                 >
                   <UpdateIcon className="icnUpdate" />
-                </div>
-                <DeleteIcon
-                  className="icnDelete"
+                </button>
+                <button className="btnWCAG"
                   onClick={() => {
                     props.deleteAPost(post.id);
                   }}
-                />
+                >
+                  <DeleteIcon className="icnDelete" />
+                </button>
               </div>
             )}
-            
-            <div
-              className="footerPost"
+
+            <button className="btnWCAG"
+              // className="footerPost"
               onClick={() => {
                 History.push(`/posts/${post.id}`);
               }}
             >
               voir plus
-            </div>
+            </button>
           </div>
         ))}
       </div>
