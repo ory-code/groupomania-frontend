@@ -121,6 +121,7 @@
 .btnWCAG {
   background-color: #1fe0;
   border: none;
+  cursor: pointer;
 }
 .updatePost textarea {
   font-family: "roboto";

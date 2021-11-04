@@ -262,6 +262,7 @@
   .onePostCard  .btnWCAG {
     background-color: #1fe0;
     border: none;
+    cursor: pointer;
   }
   .onePostCard .buttonContainerOnePost {
     display: flex;
